@@ -1,0 +1,121 @@
+*{
+       margin: 0;
+       padding: 0;
+       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.container{
+       width: 100%;
+       height: 100vh;
+       background: linear-gradient(rgba(53, 82, 66, .5), rgba(47, 80, 63, .6)),
+       url(img/Pic\ 2.jpg) center no-repeat;
+       background-size: cover;
+       overflow: hidden;
+       position: relative;
+}
+.banner{
+       width: 100%;
+       position: absolute;
+       top: 40%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+       text-align: center;
+}
+.banner h1{
+       font-size: 90px;
+       color: #fff;
+       font-weight: 300;
+       margin-bottom: 20px;
+       animation-name: moveToLeft;
+       animation-duration: 6s;
+}
+.banner span{
+       text-transform: uppercase;
+       font-weight: 700;
+       color: #fff;
+}
+.banner p{
+       font-size: 40px;
+       font-weight: 200;
+       color: #fff;
+       margin-bottom: 20px;
+       animation-name: moveToRight;
+       animation-duration: 6s;
+}
+.banner button{
+       width: 180px;
+       padding: 12px;
+       margin: 28px;
+       border: 2px solid #fff;
+       border-radius: 50px;
+       font-size: 18px;
+       outline: none;
+       letter-spacing: 1px;
+       cursor: pointer;
+}
+.btn-left{
+       background-color: #fff;
+       color: #000;
+       animation-name: animateBtn;
+       animation-duration: 3s;
+       animation-delay: 1s;
+       animation-fill-mode: backwards;
+}
+.btn-left:hover{
+       background-color: transparent;
+       color: #fff;
+}
+.btn-right{
+       background-color: transparent;
+       color: #fff;
+       animation-name: animateBtn;
+       animation-duration: 3s;
+       animation-delay: 2s;
+       animation-fill-mode: backwards;
+}
+.btn-right:hover{
+       background-color: #fff;
+       color: #000;
+}
+
+
+
+@keyframes moveToLeft{
+       0%{
+              transform: translateX(120px);
+              opacity: 0;
+       }
+       100%{
+              transform: translateX(0);
+              opacity: 1;  
+       }
+}
+@keyframes moveToRight{
+       0%{
+              transform: translateX(-120px);
+              opacity: 0;
+       }
+       100%{
+              transform: translateX(0);
+              opacity: 1;  
+       }
+}
+@keyframes animateBtn{
+       0%{
+              opacity: 0;
+       }
+       100%{
+              opacity: 1;  
+       }
+}
+@media(max-width:659px){
+       .banner h1{
+              font-size: 55px;
+       }
+       .banner p{
+              font-size: 25px;
+       }
+       .banner button{
+              width: 120px;
+              margin: 10px;
+       }
+}
